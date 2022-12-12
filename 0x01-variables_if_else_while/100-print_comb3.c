@@ -1,8 +1,6 @@
 #include <stdio.h>
-
 /**
- * main - print 00 to 99 with no duplicate digits or combos: no 11, no 10 (01)
- *
+ * main - entry point
  * Return: alway returns 0
  *
  */
