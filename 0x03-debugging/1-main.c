@@ -16,7 +16,6 @@ int main(void)
 	/**
 	 * while (i < 10)
 	 * {
-	 * infinite loop - no increament of variable
 	 * putchar(i);
 	 * }
 	 */
