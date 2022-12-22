@@ -10,6 +10,9 @@ void reverse_array(int *a, int n);
 char *string_toupper(char *);
 char *cap_string(char *);
 int main(void);
+char *rot13(char *);
+void print_number(int n);
+void print_buffer(char *b, int size);
 
 
 
