@@ -2,12 +2,11 @@
 
 /**
  * _strncat - a function
- *
  * @dest: the chaine
  * @src: the chaine
  * @n: the number
  *
- * Return: 1 or 0
+ * Return: dest
  */
 
 
