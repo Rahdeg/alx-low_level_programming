@@ -1,36 +1,29 @@
  #include "main.h"
 
 /**
- * print_number - print numbers chars
- * @n: integer params
- *
+ * rot13 - encrypts code
+ * @s: string to encrypt
+ * Return: char value
  */
 
-void print_number(int n)
+char *rot13(char *s)
 {
-	unsigned int tens, digit, positive = n;
-	double t_beg = 1;
+	char part1[52] = "aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ";
+	char part2[52] = "nNoOpPqQrRsStTuUvVwWxXyYzZaAbBcCdDeEfFgGhHiIjJkKlLmM";
 
-	if (n == 0)
-		_putchar('0');
-	else
+	int i;
+	int j = 0;
+
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (n < 0)
+		for (j = 0; part1[j] != '\0'; j++)
 		{
-			positive = n * -1;
-			_putchar('-');
-		}
-
-		while (t_beg <= positive)
-			t_beg *= 10;
-		tens = t_beg / 10;
-
-		while (tens >= 1)
-		{
-			digit = positive / tens;
-			_putchar(digit + '0');
-			positive = (positive - (tens * digit));
-			tens /= 10;
+			if (s[i] == part1[j])
+			{
+				s[i] = part2[j];
+				break;
+			}
 		}
 	}
+	return (s);
 }
