@@ -3,24 +3,34 @@
 /**
  * print_number - print numbers chars
  * @n: integer params
- * Return: 0
+ *
  */
 
 void print_number(int n)
 {
-	unsigned int n1;
+	unsigned int tens, digit, positive = n;
+	double t_beg = 1;
 
-	n1 = n;
-
-	if (n < 0)
+	if (n == 0)
+		_putchar('0');
+	else
 	{
-		_putchar('-');
-		n1 = -n;
-	}
+		if (n < 0)
+		{
+			positive = n * -1;
+			_putchar('-');
+		}
 
-	if (n1 / 10 != 0)
-	{
-		print_number(n1 / 10);
+		while (t_beg <= positive)
+			t_beg *= 10;
+		tens = t_beg / 10;
+
+		while (tens >= 1)
+		{
+			digit = positive / tens;
+			_putchar(digit + '0');
+			positive = (positive - (tens * digit));
+			tens /= 10;
+		}
 	}
-	_putchar((n1 % 10) + '0');
 }
