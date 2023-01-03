@@ -10,19 +10,18 @@
 
 char *_strpbrk(char *s, char *accept)
 {
-	if ((s == NULL) || (accept == NULL))
-		return (NULL);
-	while (*s)
-	{
-		if (strchr(accept, *s))
-		{
-			return (s);
-		}
-		else
-		{
-			s++;
-		}
+	unsigned int i;
 
+	while (*s != 0)
+	{
+		for (i = 0; *(accept + i) != 0; i++)
+		{
+			if (*s == *(accept + i))
+			{
+				return (s);
+			}
+		}
+		s++;
 	}
-	return (NULL);
+	return (0);
 }
