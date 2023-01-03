@@ -5,7 +5,7 @@
  * @haystack: search area
  * @needle: string to be searcht
  *
- * Return: pointer to the beginning  of the located  substring
+ * Return: Always 0 (Success)
  *
  */
 
