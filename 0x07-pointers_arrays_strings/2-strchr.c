@@ -3,23 +3,22 @@
 /**
  * _strchr - a function ...
  * @s: the chaine
- * @c: the char
+ * @c: character to locate
  *
- * Return: character value
+ * Return: pointer to the first occurrence of the character
  */
 
 char *_strchr(char *s, char c)
 {
-	int i;
-
-	for (i = 0; s[i] != '\0'; i++)
+	while (*s != 0)
 	{
-		if (s[i] == c)
-		{
-			return (s + i);
-		}
+		if (*s == b)
+			return (s);
+		s++;
 	}
-	if (s[i] == c)
-		return (s + i);
-	return (0);
+
+	if (*s == b)
+		return (s);
+
+	return ('\0');
 }
