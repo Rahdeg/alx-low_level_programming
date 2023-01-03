@@ -5,7 +5,7 @@
  * @s: the chaine
  * @c: the char
  *
- * Return: 1 or 0
+ * Return: character value
  */
 
 char *_strchr(char *s, char c)
