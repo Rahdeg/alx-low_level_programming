@@ -11,10 +11,21 @@
 
 char *_strstr(char *haystack, char *needle);
 {
-	unsigned int i, size = 0;
-
-	while (*(needle + size) != 0)
+	for (; *haystack != '\0'; haystack++)
 	{
-		size++;
+		char *l = haystack;
+		char *p = needle;
+
+		while (*l == *p && *p != '\0')
+		{
+			l++;
+			p++;
+		}
+
+		if (*p == '\0')
+			return (haystack);
+	}
+	return (0);
+}
 
 
