@@ -2,31 +2,19 @@
 #include <stdio.h>
 
 /**
- * simple_print_buffer - prints buffer in hexa
- * @buffer: the address of memory to print
- * @size: the size of the memory to print
+ * _memset - a function ...
+ * @s: the chaine
+ * @b: the char
+ * @n: the int
  *
- * Return: Nothing.
- *
+ * Return: 1 or 0
  */
 
-void simple_print_buffer(char *buffer, unsigned int size)
+char *_memset(char *s, char b, unsigned int n)
 {
-	unsigned int i;
+	unsigned int i = 0;
 
-	i = 0;
-	while (i < size)
-	{
-		if (i % 10)
-		{
-			printf(" ");
-		}
-		if (!(i % 10) && i)
-		{
-			printf("\n");
-		}
-		printf("0x%02x", buffer[i]);
-		i++;
-	}
-	printf("\n");
+	for (i = 0; i < n; i++)
+		s[i] = b;
+	return (s);
 }
