@@ -5,11 +5,11 @@
  * @haystack: search area
  * @needle: string to be searcht
  *
- * Return: Always 0 (Success)
+ * Return: Always 0 (Successi)
  *
  */
 
-char *_strstr(char *haystack, char *needle);
+char *_strstr(char *haystack, char *needle)
 {
 	for (; *haystack != '\0'; haystack++)
 	{
