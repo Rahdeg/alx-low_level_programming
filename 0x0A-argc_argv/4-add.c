@@ -1,6 +1,6 @@
-#include<stdio.h>
+#include <stdio.h>
 #include "main.h"
-#include<stdlib.h>
+#include <stdlib.h>
 
 /**
  * ft_atoi - function
@@ -14,7 +14,8 @@ int ft_atoi(const char *str)
 	int sign;
 
 	n = 0;
-	while (*str == ' ' || *str == '\t' || *str == '\v' || *str == '\r' || *str == '\n' || *str == '\f')
+	while (*str == ' ' || *str == '\t' || *str == '\v' || *str == '\r' ||
+*str == '\n' || *str == '\f')
 		str++;
 	sign = *str == '-' ? -1 : 1;
 	if (sign == -1 || *str == '+')
