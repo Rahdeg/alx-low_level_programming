@@ -3,7 +3,7 @@
 #include <stddef.h>
 
 /**
- * print_listint - Entry Point
+ * print_list - Prints all the elements of a list_t list.
  * @h: The list_t list.
  *
  * Return: the number of nodes
